@@ -1,35 +1,41 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
+.wrapper{
   margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  width:50%;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.main-head{
+  /* Typography */
+  font-weight: 500 ;
+  font-size:2rem;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #122230;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.sub-head{
+  /* Typography */
+  font-weight: bold;
+  font-size:1rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+  color: #7D7D7D;
+  text-align: center;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.logo{
+  display: block;
+  margin: 0 auto;
+  width:10rem;
+  height:4rem
 }
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  background-color: #7D7D7D;
+}
+

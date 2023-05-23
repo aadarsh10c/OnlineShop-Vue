@@ -1,18 +1,17 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img alt="Hulk logo" class="logo" src="./assets/hulk_logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <h1 class="main-head">Featured Collection</h1>
+      <p class="sub-head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad, assumenda adipisci illum rerum fugiat voluptatem fuga repellat ullam sapiente!</p>
     </div>
   </header>
 
   <main>
-    <TheWelcome />
   </main>
 </template>
 
