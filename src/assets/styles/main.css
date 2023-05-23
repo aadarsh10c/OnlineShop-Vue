@@ -36,8 +36,10 @@
 .container{
   width: 95%;
   margin: 0 auto;
-  margin-top: 1rem;
-  background-color: aqua;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card{
