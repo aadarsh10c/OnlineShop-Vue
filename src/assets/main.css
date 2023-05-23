@@ -8,7 +8,7 @@
 .main-head{
   /* Typography */
   font-weight: 500 ;
-  font-size:2rem;
+  font-size:3rem;
   letter-spacing: 0;
   line-height: 1;
   color: #122230;
@@ -19,7 +19,7 @@
 .sub-head{
   /* Typography */
   font-weight: bold;
-  font-size:1rem;
+  font-size:1.6rem;
   letter-spacing: 0;
   line-height: 1.5;
   color: #7D7D7D;
@@ -34,8 +34,62 @@
 }
 
 .container{
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
-  background-color: #7D7D7D;
+  margin-top: 1rem;
+  background-color: aqua;
 }
 
+.card{
+  width: 20%;
+}
+
+.card > *:not(:last-child){
+  margin-bottom: 1rem;
+}
+
+.pic{
+  width: 100%;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info h3{
+/* Typography */
+font-size: 1.3rem;
+font-weight: bold;
+line-height: 1.1;
+color:#1E1E1E;
+}
+
+.btn{
+  width: 100%;
+  height:3rem;
+  background-color: #1E1E1E00;
+  border: 1px solid #1E1E1E;
+  transform: translateY(0);
+  transition: transform .3s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #1e1e1e41;
+}
+
+.btn:active{
+  background-color: #1e1e1e41;
+  transform: translateY(3px);
+}
+
+.btn-text{
+  /* Typography */
+  text-align: center;
+  font-size:1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1E1E1E;
+}

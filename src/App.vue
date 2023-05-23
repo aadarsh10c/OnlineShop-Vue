@@ -1,9 +1,12 @@
 <script setup>
+import Collection from './components/Collection.vue';
+import userLogo from './assets/hulk_logo.svg'
+
 </script>
 
 <template>
   <header>
-    <img alt="Hulk logo" class="logo" src="./assets/hulk_logo.svg" width="125" height="125" />
+    <img alt="Hulk logo" class="logo" :src="userLogo" width="125" height="125" />
 
     <div class="wrapper">
       <h1 class="main-head">Featured Collection</h1>
@@ -12,6 +15,7 @@
   </header>
 
   <main>
+    <Collection/>
   </main>
 </template>
 
