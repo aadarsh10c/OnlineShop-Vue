@@ -35,7 +35,7 @@ const state = reactive({
 
 
 //toggle for showing cart
-const showCart = ref( true )
+const showCart = ref( false )
 function setShowCart(){
   showCart.value = !showCart.value
 }
