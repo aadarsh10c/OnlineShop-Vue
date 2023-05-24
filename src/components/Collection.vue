@@ -1,16 +1,12 @@
 <script setup>
 import Card from './Card.vue';
-
-// import Products from json
-import productsJSON from '../assets/products.json'
-
-//take data of 4 products
-const productList = productsJSON.products.slice(4,8);
+import {state} from '../App.vue'
+console.log( state.productMap )
 
 </script>
 
 <template>
     <div class="container" >
-        <Card v-for="(product,index) in productList" :key="index" :product="product"/>
+        <Card v-for="[index,product] in productMap" :key="index" :product="product"/>
     </div>
 </template>

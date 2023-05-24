@@ -1,5 +1,148 @@
 @import './base.css';
 
+.shop-container{
+  width:90%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.427);
+  box-shadow: 0 1px 2px 2px rgba(0,0,0,.4);
+  position:relative;
+}
+
+.cart-box{
+  position:absolute;
+  top:0;
+  right:0;
+  background-color: #847f7f29;;
+  padding:1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-icon{
+  width:1.5rem;
+}
+
+
+/* Modal Styles */
+.modal-container{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.339);
+  animation: fadein .7s ease-in ;
+  z-index:1;
+}
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.modal{
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  right:0;
+  background-color: white;
+}
+
+
+
+.modal > *{
+  padding: 1rem;
+}
+.modal-head{
+  border-bottom: 2px solid darkgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.close-container{
+  cursor: pointer;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.close-container:hover{
+  background-color: rgba(211, 211, 211, 0.441);
+}
+
+.modal-footer{
+  background-color: #EFF5F7;
+  border-top: 2px solid darkgrey;
+  position: absolute;
+  bottom: 0;
+}
+.modal-footer > *:not(:last-child){
+  margin-bottom: 1rem;
+}
+.checkout-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkout-button,
+.checkout-button:focus{
+  width: 100%;
+  border: none;
+  padding: 1rem ;
+  background-color: rgba(0, 0, 0, 0.853);
+  text-transform: uppercase;
+  color: white;
+  font-size: .8rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.checkout-footer{
+  width:75%;
+  margin: 0 auto;
+}
+  
+.checkout-footer p {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Modal Styling end  */
+
+.counter-container{
+  position: absolute;
+  width: 25%;
+  height: 20%;
+  top:2.5rem;
+  right:.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter{
+  font-size: .7rem;
+}
+
 .wrapper{
   margin: 0 auto;
   width:50%;
