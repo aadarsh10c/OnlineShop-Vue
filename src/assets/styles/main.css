@@ -127,6 +127,81 @@
 
 /* Modal Styling end  */
 
+.modal-body{
+  max-height: 60%;
+  overflow-y: auto;
+}
+
+.modal-body > *:not(:last-child){
+  border-bottom: 2px solid #7D7D7D;
+  margin-bottom: 1rem;
+}
+.modal-item{
+  width:100%;
+  display: flex;
+  align-items:center ;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.item-info{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.item-image-box{
+  width: 60%;
+}
+.item-image{
+  display: block;
+  width: 100%;
+}
+
+.item-desc{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.item-desc h3{
+  font-weight: 700;
+}
+.item-btn{
+  font-size: 1.5rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #EFF5F7;
+  overflow: none;
+  border-radius: 50px;
+}
+
+.item-btn > *{
+  width: 33.3%;
+  text-align: center;
+}
+
+.minus,
+.plus{
+  cursor: pointer;
+}
+
+.item-price{
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-price{
+  padding: .5rem;
+}
+
+
 .counter-container{
   position: absolute;
   width: 25%;

@@ -1,6 +1,7 @@
 <script setup>
 import Card from './Card.vue';
 import {state} from '../App.vue'
+
 console.log( state.productMap )
 
 </script>
