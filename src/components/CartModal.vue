@@ -3,7 +3,8 @@ import closeLine from '../assets/close-line.svg'
 import smallClose from '../assets/close-line-small.svg'
 const props = defineProps({
     productMap: Map,
-    totalItems: Number
+    totalItems: Number,
+    totalPrice: Number
 })
 
 </script>
@@ -51,7 +52,7 @@ const props = defineProps({
         <div class="modal-footer">
             <div class="checkout-head">
                 <h1 class="checkout-title">SUBTOTAL</h1>
-                <h1 class="checkout-price">$131.98</h1>
+                <h1 class="checkout-price">${{ props.totalPrice }}</h1>
             </div>
 
             <button class="checkout-button">

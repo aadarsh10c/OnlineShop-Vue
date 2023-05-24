@@ -20,7 +20,7 @@ const productMap = new Map()
         id,
         imageURL:product.images[1].src,
         title:product.title,
-        price:product.variants[0].price,
+        price: parseInt(product.variants[0].price),
         count:0
     }
     productMap.set(id , obj)
@@ -28,7 +28,8 @@ const productMap = new Map()
 
 const state = reactive({
   productMap:productMap,
-  totalItems: 0
+  totalItems: 0,
+  totalPrice: 0
 })
 
 
@@ -39,23 +40,30 @@ const showCart = ref( false )
 function setShowCart(){
   showCart.value = !showCart.value
 }
+
+//increment the price,count of cart items
 function incrementCart( id ){
     if(state.productMap.has(id)){
       state.productMap.get(id).count++
       state.totalItems++
+      state.totalPrice += state.productMap.get(id).price
     } 
 }
-
+//Decrrease the price,count of cart items
 function decrementCart( id ){
     if(productMap.has(id)){
       state.productMap.get(id).count--
       state.totalItems--
+      state.totalPrice -= state.productMap.get(id).price
     } 
 }
+
+//remove item from cart, then calculate the count and price of res of items
 
 function resetCount( id ){
   if(productMap.has(id)){
       state.totalItems -= state.productMap.get(id).count
+      state.totalPrice -= (state.productMap.get(id).count * state.productMap.get(id).price)
       state.productMap.get(id).count = 0
     } 
 }
@@ -65,7 +73,7 @@ function resetCount( id ){
 <template>
   <div class="shop-container">
     <div v-if="showCart" class="modal-container">
-      <CartModal @close-modal="setShowCart" @rem-from-cart="decrementCart" @add-to-cart="incrementCart" @remove-item="resetCount" :productMap="state.productMap" :total-items="state.totalItems"/>
+      <CartModal @close-modal="setShowCart" @rem-from-cart="decrementCart" @add-to-cart="incrementCart" @remove-item="resetCount" :productMap="state.productMap" :total-items="state.totalItems" :total-price="state.totalPrice"/>
     </div>
       <header>
         <div class="cart-box"  @click="setShowCart">
